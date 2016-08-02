@@ -3,6 +3,8 @@
 
 > 现在已经好几年不做Winform开发了，整理一下共享出来，希望能够给需要的朋友一些帮助。在Win8、win10上运行是没有什么大的问题的，好像有写重绘的小bug，应该是个很容易解决的问题，没有继续深究它了。
 
-## 详细博客介绍地址：http://www.cnblogs.com/anding/p/4715440.html
+<p> 详细博客介绍地址：http://www.cnblogs.com/anding/p/4715440.html </p>
 
-[id]:http://images0.cnblogs.com/blog/151257/201508/091651184099537.png
+[image]:(http://images0.cnblogs.com/blog/151257/201508/091651184099537.png)
+
+[image]:(http://images0.cnblogs.com/blog/151257/201508/091651195188566.png)
