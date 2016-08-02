@@ -1,0 +1,1056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8746B10-EAAF-44B7-95CC-29E4C42EC8D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TX.Framework.WindowUI</RootNamespace>
+    <AssemblyName>TX.Framework.WindowUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TX.Framework.WindowUI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TX.Framework.WindowUI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.5.3.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\GMap\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\GMap\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TX.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\TX.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\SKin\EnumTheme.cs" />
+    <Compile Include="AppCode\SKin\LoadResource.cs" />
+    <Compile Include="AppCode\SKin\SkinThemeBlueSea.cs" />
+    <Compile Include="AppCode\SKin\SkinThemeDefault.cs" />
+    <Compile Include="AppCode\SKin\SkinThemeKissOfAngel.cs" />
+    <Compile Include="AppCode\SKin\SkinThemeNoFlower.cs" />
+    <Compile Include="AppCode\SKin\SkinThemeSunsetRed.cs" />
+    <Compile Include="AppCode\{Reference}\Caching\Cache.cs" />
+    <Compile Include="AppCode\{Reference}\Caching\CacheStrategy.cs" />
+    <Compile Include="AppCode\{Reference}\Caching\ICache.cs" />
+    <Compile Include="AppCode\{Reference}\Caching\LruCache.cs" />
+    <Compile Include="AppCode\{Reference}\Caching\ThreadSafeCache.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\DoubleEndedQueue.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Generic\HashList.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Generic\IEnumerableExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Generic\LatestPriorityDictionary.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Generic\PagedCollection.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Generic\TopDeque{TKey,TValue}.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\PriorityQueue.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Queue.cs" />
+    <Compile Include="AppCode\{Reference}\Collections\Specialized\NameValueCollectionExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\ComponentModel\ChainingPropertyDescriptor.cs" />
+    <Compile Include="AppCode\{Reference}\ComponentModel\HyperTypeDescriptionProvider.cs" />
+    <Compile Include="AppCode\{Reference}\ComponentModel\HyperTypeDescriptor.cs" />
+    <Compile Include="AppCode\{Reference}\ImageHelper.cs" />
+    <Compile Include="AppCode\{Reference}\Pair.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\CallInfo.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\ClassHelper.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Delegates.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\ArrayGetEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\ArraySetEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\BaseEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\CtorInvocationEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\EmitHelper.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\InvocationEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\LookupUtils.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\MapEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\MemberGetEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\MemberSetEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Emit\MethodInvocationEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\AttributeExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\ConstructorExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\ConstructorInfoExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\FieldExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\FieldInfoExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\MemberExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\MemberInfoExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\MethodExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\MethodInfoExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\ParameterInfoExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\PropertyExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Extensions\PropertyInfoExtensions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Flags.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\FormatOptions.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\MemberAdapter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\MemberFilter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\Probing\TypeConverter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\ReflectionConst.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\AttributeEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\AttributeGetEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\AttributeSetEmitter.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\BaseEmitter_.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\CallInfo.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\CtorInvocationEmitter_.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\DelegateCache.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\InvocationEmitter_.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\MethodInvocationEmitter_.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\V1\Reflector.cs" />
+    <Compile Include="AppCode\{Reference}\Reflection\ValueTypeHolder.cs" />
+    <Compile Include="AppCode\{Reference}\Threading\AsyncOperation.cs" />
+    <Compile Include="AppCode\{Reference}\Threading\ILockable.cs" />
+    <Compile Include="AppCode\{Reference}\Threading\Lockable.cs" />
+    <Compile Include="AppCode\{Reference}\Threading\ThreadSafeDictionary.cs" />
+    <Compile Include="AppCode\{Reference}\TypeExtensions.cs" />
+    <Compile Include="AppCode\Utility\Callback.cs" />
+    <Compile Include="AppCode\Utility\ControlHelper.cs" />
+    <Compile Include="AppCode\Utility\Guard.cs" />
+    <Compile Include="AppCode\SKin\SkinTheme.cs" />
+    <Compile Include="AppCode\SKin\SkinManager.cs" />
+    <Compile Include="AppCode\SKin\ColorScheme.cs" />
+    <Compile Include="AppCode\Utility\GDIHelper.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsClipboard.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsComctl32.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsEnums.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsGdi.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsMenu.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsShell.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsShlwapi.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsStructs.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsUser32.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsUxTheme.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\APIsWndProc.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\ColorUtil.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\COMInterfaces.cs" />
+    <Compile Include="AppCode\{InteropServices}\APIs\TextUtil.cs" />
+    <Compile Include="AppCode\Model\Enums.cs" />
+    <Compile Include="AppCode\Model\RoundRectangle.cs" />
+    <Compile Include="AppCode\Model\Structs.CS" />
+    <Compile Include="AppCode\{Template}\AST\ExpressionNode.cs" />
+    <Compile Include="AppCode\{Template}\AST\ForeachNode.cs" />
+    <Compile Include="AppCode\{Template}\AST\IfNode.cs" />
+    <Compile Include="AppCode\{Template}\AST\SetNode.cs" />
+    <Compile Include="AppCode\{Template}\AST\TextNode.cs" />
+    <Compile Include="AppCode\{Template}\AST\TokenNode.cs" />
+    <Compile Include="AppCode\{Template}\AST\WhileNode.cs" />
+    <Compile Include="AppCode\{Template}\Common\IValueType.cs" />
+    <Compile Include="AppCode\{Template}\Common\TemplateParser.cs" />
+    <Compile Include="AppCode\{Template}\Common\TemplateTokenType.cs" />
+    <Compile Include="AppCode\{Template}\Common\TokenMatch.cs" />
+    <Compile Include="AppCode\{Template}\Common\ValueTypePair.cs" />
+    <Compile Include="AppCode\{Template}\Config\TemplateConfig.cs" />
+    <Compile Include="AppCode\{Template}\Config\Velocity\Velocity.cs" />
+    <Compile Include="AppCode\{Template}\Config\Velocity\VelocityConfig.cs" />
+    <Compile Include="AppCode\{Template}\Context\AssignmentPermissions.cs" />
+    <Compile Include="AppCode\{Template}\Context\ContextFactory.cs" />
+    <Compile Include="AppCode\{Template}\Context\CSharpContext.cs" />
+    <Compile Include="AppCode\{Template}\Context\ITemplateContext.cs" />
+    <Compile Include="AppCode\{Template}\Context\TemplateContext.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\AddExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\AndAlsoExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\AsExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\AssignmentExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\BinaryArithmicExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\BinaryExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\BinaryExpressionHelper.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\BitwiseComplementExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\CallExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\CoalesceExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\ConditionalExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\ConstructorExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\DivideExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\FieldExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\IndexExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\IsExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\MultiplyExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\NegationExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\OrElseExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\SubtractExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\TypeCastExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\TypeOfExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\UnaryMinusExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\ValueExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Expressions\VariableExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\IExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\CSharpParser.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\ExpressionParser.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\IExpressionParser.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\OperatorAssociativity.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\RPNExpression.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\Token.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\TokenDefinition.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Parser\TokenType.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Refletion\ClassName.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Refletion\InstanceMethod.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Refletion\LazyBinder.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Refletion\MethodDefinition.cs" />
+    <Compile Include="AppCode\{Template}\Expression\Refletion\StaticMethod.cs" />
+    <Compile Include="AppCode\{Template}\TemplateEngine.cs" />
+    <Compile Include="AppCode\{Template}\TemplateSyntax.cs" />
+    <Compile Include="AppCode\{Win32}\Enums\APIsEnums.cs" />
+    <Compile Include="AppCode\{Win32}\IniConfig.cs" />
+    <Compile Include="AppCode\{Win32}\NativeMethods\Comctl32.cs" />
+    <Compile Include="AppCode\{Win32}\NativeMethods\Gdi32.cs" />
+    <Compile Include="AppCode\{Win32}\NativeMethods\User32.cs" />
+    <Compile Include="AppCode\{Win32}\Structs\APIsStructs.cs" />
+    <Compile Include="AppCode\{Win32}\Win32.cs" />
+    <Compile Include="Controls\Docking\AutoHideStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockAreasEditor.cs" />
+    <Compile Include="Controls\Docking\DockContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockContentCollection.cs" />
+    <Compile Include="Controls\Docking\DockContentEventArgs.cs" />
+    <Compile Include="Controls\Docking\DockContentHandler.cs" />
+    <Compile Include="Controls\Docking\DockOutlineBase.cs" />
+    <Compile Include="Controls\Docking\DockPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPane.SplitterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPaneCaptionBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPaneCollection.cs" />
+    <Compile Include="Controls\Docking\DockPanel.AutoHideWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.DockDragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.DragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.FocusManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.MdiClientController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.Persistor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanel.SplitterDragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockPanelExtender.cs" />
+    <Compile Include="Controls\Docking\DockPanelSkin.cs" />
+    <Compile Include="Controls\Docking\DockPaneStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockWindow.SplitterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DockWindowCollection.cs" />
+    <Compile Include="Controls\Docking\DragForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\DummyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\Enums.cs" />
+    <Compile Include="Controls\Docking\FloatWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\FloatWindowCollection.cs" />
+    <Compile Include="Controls\Docking\Helpers\DockHelper.cs" />
+    <Compile Include="Controls\Docking\Helpers\DrawHelper.cs" />
+    <Compile Include="Controls\Docking\Helpers\ResourceHelper.cs" />
+    <Compile Include="Controls\Docking\Helpers\Win32Helper.cs" />
+    <Compile Include="Controls\Docking\InertButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\Interfaces.cs" />
+    <Compile Include="Controls\Docking\Localization.cs" />
+    <Compile Include="Controls\Docking\Measures.cs" />
+    <Compile Include="Controls\Docking\NestedDockingStatus.cs" />
+    <Compile Include="Controls\Docking\NestedPaneCollection.cs" />
+    <Compile Include="Controls\Docking\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Docking\SplitterBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Docking\VisibleNestedPaneCollection.cs" />
+    <Compile Include="Controls\Docking\VS2005AutoHideStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\VS2005DockPaneCaption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\VS2005DockPaneStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Docking\Win32\Enums.cs" />
+    <Compile Include="Controls\Docking\Win32\NativeMethods.cs" />
+    <Compile Include="Controls\DrowDownTree\DefaultTreeNode.cs" />
+    <Compile Include="Controls\DrowDownTree\EmptyTreeNode.cs" />
+    <Compile Include="Controls\DrowDownTree\TreeComboBoxContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DrowDownTree\TreeNodeEx.cs" />
+    <Compile Include="Controls\DrowDownTree\TreeNodeEventArgs.cs" />
+    <Compile Include="Controls\DrowDownTree\TXTreeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\CheckBoxProperties.cs" />
+    <Compile Include="Controls\MultiselectComboBox\GripBounds.cs" />
+    <Compile Include="Controls\MultiselectComboBox\MultiselectComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\MultiselectComboBox.designer.cs">
+      <DependentUpon>MultiselectComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\MultiselectComboBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\MultiselectComboBoxItemList.cs" />
+    <Compile Include="Controls\MultiselectComboBox\MultiselectComboBoxListControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\MultiselectComboBoxListControlContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\Popup.designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\PopupComboBox.designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MultiselectComboBox\Selection\ListSelection.cs" />
+    <Compile Include="Controls\MultiselectComboBox\Selection\ObjectSelection.cs" />
+    <Compile Include="Controls\MultiselectComboBox\TXPopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXRangeValue\RangeValueHeader.cs" />
+    <Compile Include="Controls\TXRangeValue\RangeValueItem.cs" />
+    <Compile Include="Controls\TXRangeValue\TXRangeValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TXRangeValue\TXRangeValue.Designer.cs">
+      <DependentUpon>TXRangeValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TemplateListView\ListViewSorter.cs" />
+    <Compile Include="Controls\TemplateListView\SubItemEndEditingEventArgs.cs" />
+    <Compile Include="Controls\TemplateListView\SubItemEventArgs.cs" />
+    <Compile Include="Controls\TemplateListView\TemplateColumnHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TemplateListView\TemplateColumnHeaderCollection.cs" />
+    <Compile Include="Controls\TemplateListView\TemplateListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ThumbnailView\ThumbnailView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeListView\CheckBoxesTypes.cs" />
+    <Compile Include="Controls\TreeListView\CheckDirection.cs" />
+    <Compile Include="Controls\TreeListView\EditItemInformations.cs" />
+    <Compile Include="Controls\TreeListView\ITreeListViewItemComparer.cs" />
+    <Compile Include="Controls\TreeListView\SelectedTreeListViewItemCollection.cs" />
+    <Compile Include="Controls\TreeListView\TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeListView\TreeListViewAction.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewEventArgs.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewExpandMethod.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewItem.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewItemBoundsPortion.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewItemCollection.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewLabelEditEventArgs.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewSubItemEdit.cs" />
+    <Compile Include="Controls\TXButton\TXButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXCheckBox\TXCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXComboBox\TXComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXDateTimePicker\TXDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXGroupBox\TXGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\frmAddImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\frmAddImage.designer.cs">
+      <DependentUpon>frmAddImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\frmPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\frmPreview.designer.cs">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\frmSourceCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\frmSourceCode.designer.cs">
+      <DependentUpon>frmSourceCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\TXHtmlEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TXHtmlEditor\TXHtmlEditor.designer.cs">
+      <DependentUpon>TXHtmlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXListView\TXListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXMonthCalendar\AlignControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXMonthCalendar\AlignEditor.cs" />
+    <Compile Include="Controls\TXMonthCalendar\DateItem.cs" />
+    <Compile Include="Controls\TXMonthCalendar\DateItemCollection.cs" />
+    <Compile Include="Controls\TXMonthCalendar\DateItemCollectionEditor.cs" />
+    <Compile Include="Controls\TXMonthCalendar\Day.cs" />
+    <Compile Include="Controls\TXMonthCalendar\Footer.cs" />
+    <Compile Include="Controls\TXMonthCalendar\GlobalHook.cs" />
+    <Compile Include="Controls\TXMonthCalendar\Header.cs" />
+    <Compile Include="Controls\TXMonthCalendar\ImageListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXMonthCalendar\ImageMapEditor.cs" />
+    <Compile Include="Controls\TXMonthCalendar\Month.cs" />
+    <Compile Include="Controls\TXMonthCalendar\MonthCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXMonthCalendar\NativeMethods.cs" />
+    <Compile Include="Controls\TXMonthCalendar\RoomRate.cs" />
+    <Compile Include="Controls\TXMonthCalendar\SelectedDatesCollection.cs" />
+    <Compile Include="Controls\TXMonthCalendar\SelectionArea.cs" />
+    <Compile Include="Controls\TXMonthCalendar\Weekday.cs" />
+    <Compile Include="Controls\TXMonthCalendar\Weeknumber.cs" />
+    <Compile Include="Controls\TXPager\PageEventArgs.cs" />
+    <Compile Include="Controls\TXPager\TXPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TXPander\Renderer\BseColorTable.cs" />
+    <Compile Include="Controls\TXPander\Renderer\BseRenderer.cs" />
+    <Compile Include="Controls\TXPander\Renderer\ColorTableBlack.cs" />
+    <Compile Include="Controls\TXPander\Renderer\ColorTableBlue.cs" />
+    <Compile Include="Controls\TXPander\Renderer\Office2007BlackColorTable.cs" />
+    <Compile Include="Controls\TXPander\Renderer\Office2007BlueColorTable.cs" />
+    <Compile Include="Controls\TXPander\Renderer\Office2007Renderer.cs" />
+    <Compile Include="Controls\TXPander\Renderer\Office2007SilverColorTable.cs" />
+    <Compile Include="Controls\TXPander\Renderer\OfficeColorTable.cs" />
+    <Compile Include="Controls\TXPander\Renderer\ProfessionalColorTable.cs" />
+    <Compile Include="Controls\TXPander\XPander\BasePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\CaptionStyle.cs" />
+    <Compile Include="Controls\TXPander\XPander\ColorScheme.cs" />
+    <Compile Include="Controls\TXPander\XPander\ColorSchemeChangeEventArgs.cs" />
+    <Compile Include="Controls\TXPander\XPander\Constants.cs" />
+    <Compile Include="Controls\TXPander\XPander\CustomColors.cs" />
+    <Compile Include="Controls\TXPander\XPander\CustomPanelColors.cs" />
+    <Compile Include="Controls\TXPander\XPander\CustomXPanderPanelColors.cs" />
+    <Compile Include="Controls\TXPander\XPander\DisplayInformation.cs" />
+    <Compile Include="Controls\TXPander\XPander\HoverState.cs" />
+    <Compile Include="Controls\TXPander\XPander\HoverStateChangeEventArgs.cs" />
+    <Compile Include="Controls\TXPander\XPander\IPanel.cs" />
+    <Compile Include="Controls\TXPander\XPander\Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\Panel.designer.cs">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\PanelColors.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsBlack.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsBlue.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsBse.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsOffice.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsOffice2007Black.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsOffice2007Blue.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsOffice2007Silver.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelColorsRed.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelSettingsManager.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelStyle.cs" />
+    <Compile Include="Controls\TXPander\XPander\PanelStyleChangeEventArgs.cs" />
+    <Compile Include="Controls\TXPander\XPander\UseAntiAlias.cs" />
+    <Compile Include="Controls\TXPander\XPander\UseClearTypeGridFit.cs" />
+    <Compile Include="Controls\TXPander\XPander\XPanderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\XPanderPanel.Designer.cs">
+      <DependentUpon>XPanderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\XPanderPanelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\XPanderPanelList.Designer.cs">
+      <DependentUpon>XPanderPanelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXPander\XPander\XPanderStateChangeEventArgs.cs" />
+    <Compile Include="Controls\TXPanel\TXPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXRadioButton\TXRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXScrollBar\TXScrollBar.cs" />
+    <Compile Include="Controls\TXTabControl\TXTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXTabControl\UpDownButtonPaintEventArgs.cs" />
+    <Compile Include="Controls\TXTableLayoutPanel\TXTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXTextBox\TXTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TXToolBar\TXToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TXToolBar\TXToolBar.Designer.cs">
+      <DependentUpon>TXToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXToolBar\TXToolBarEventArgs.cs" />
+    <Compile Include="Controls\TXToolStrip\TXContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXToolStrip\TXMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXToolStrip\TXStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXToolStrip\TXToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TXToolStrip\TXToolStripRenderer.cs" />
+    <Compile Include="Controls\TXTreeComboBox\TXTreeComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Excel\Attributes\DefaultSheetAttribute.cs" />
+    <Compile Include="Excel\Attributes\FromCellAttribute.cs" />
+    <Compile Include="Excel\Attributes\FromRangeAttribute.cs" />
+    <Compile Include="Excel\Attributes\ToCellAttribute.cs" />
+    <Compile Include="Excel\Attributes\ToDynamicRangeAttribute.cs" />
+    <Compile Include="Excel\Attributes\ToRangeAttribute.cs" />
+    <Compile Include="Excel\Attributes\UseSheetAttribute.cs" />
+    <Compile Include="Excel\Category.cs" />
+    <Compile Include="Excel\ExcelException.cs" />
+    <Compile Include="Excel\ExcelManager.cs" />
+    <Compile Include="Excel\ExcelMapper.cs" />
+    <Compile Include="Forms\BaseForm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForm\BaseForm.Extend.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForm\BaseForm.NonModalWaitingBox.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForm\BaseForm.Render.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForm\FormRender.cs" />
+    <Compile Include="Forms\BaseForm\FormControlBoxRender.cs" />
+    <Compile Include="Forms\BaseForm\BaseForm.ControlBox.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorBox\frmErrorBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorBox\frmErrorBox.designer.cs">
+      <DependentUpon>frmErrorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEntity\FormInfoEntity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEntity\FormInfoEntity.designer.cs">
+      <DependentUpon>FormInfoEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEntity\FormInfoListEntity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEntity\FormInfoListEntity.designer.cs">
+      <DependentUpon>FormInfoListEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEntity\FormListEntity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEntity\FormListEntity.designer.cs">
+      <DependentUpon>FormListEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm\BtnEventArgs.cs" />
+    <Compile Include="Forms\MainForm\frmSkinManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm\frmSkinManager.designer.cs">
+      <DependentUpon>frmSkinManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox\TXMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox\TXMessageBox.designer.cs">
+      <DependentUpon>TXMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBox\TXMessageBoxExtensions.cs" />
+    <Compile Include="Forms\PopBox\PopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PopBox\PopForm.Designer.cs">
+      <DependentUpon>PopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitingBox\TXWaitingBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitingBox\TXWaitingBox.designer.cs">
+      <DependentUpon>TXWaitingBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitingBox\WaitWindow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Map\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\naruto.png" />
+    <None Include="Resources\logos.png" />
+    <None Include="Resources\load2 %284%29.gif" />
+    <None Include="Resources\load2 %282%29.gif" />
+    <None Include="Resources\load2 %281%29.gif" />
+    <None Include="Resources\load2.gif" />
+    <None Include="Resources\loader %2813%29.gif" />
+    <None Include="Resources\loader %2812%29.gif" />
+    <None Include="Resources\loader %2811%29.gif" />
+    <None Include="Resources\loader %2810%29.gif" />
+    <None Include="Resources\loader %289%29.gif" />
+    <None Include="Resources\loader %288%29.gif" />
+    <None Include="Resources\loader %287%29.gif" />
+    <None Include="Resources\loader %286%29.gif" />
+    <None Include="Resources\loader %285%29.gif" />
+    <None Include="Resources\loader %284%29.gif" />
+    <None Include="Resources\loader %283%29.gif" />
+    <None Include="Resources\loader %282%29.gif" />
+    <None Include="Resources\loader %281%29.gif" />
+    <None Include="Resources\loader%280%29.gif" />
+    <EmbeddedResource Include="Controls\TXMonthCalendar\Images\prev_month_vs.bmp" />
+    <EmbeddedResource Include="Controls\TXMonthCalendar\Images\prev_year.bmp" />
+    <EmbeddedResource Include="Controls\TXMonthCalendar\Images\prev_year_disabled.bmp" />
+    <EmbeddedResource Include="Controls\TXMonthCalendar\Images\prev_year_vs.bmp" />
+    <None Include="Resources\shape_group.png" />
+    <None Include="Resources\1348579722_download.png" />
+    <EmbeddedResource Include="Controls\DrowDownTree\TreeComboBoxContainer.resx">
+      <DependentUpon>TreeComboBoxContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXMonthCalendar\AlignControl.resx">
+      <DependentUpon>AlignControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXMonthCalendar\ImageListPanel.resx">
+      <DependentUpon>ImageListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXMonthCalendar\MonthCalendar.resx">
+      <DependentUpon>MonthCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXRangeValue\TXRangeValue.resx">
+      <DependentUpon>TXRangeValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXTreeComboBox\TXTreeComboBox.resx">
+      <DependentUpon>TXTreeComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PopBox\PopForm.resx">
+      <DependentUpon>PopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BM_dropdown.bmp" />
+    <None Include="Resources\1347777508_16-message-warn.png" />
+    <None Include="Resources\1347776853_attention3_16x16.gif" />
+    <None Include="Config\Skin.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Config\Skin.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Config\Skin\NoFlower.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Skin\BlueSea.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Skin\SunsetRed.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\Skin\KissOfAngel.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Docking\Resources.resx">
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Docking\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TemplateListView\TemplateListView.resx">
+      <DependentUpon>TemplateListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ThumbnailView\ThumbnailView.resx">
+      <DependentUpon>ThumbnailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TreeListView\TreeListView.resx">
+      <DependentUpon>TreeListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXHtmlEditor\frmAddImage.resx">
+      <DependentUpon>frmAddImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXHtmlEditor\frmPreview.resx">
+      <DependentUpon>frmPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXHtmlEditor\frmSourceCode.resx">
+      <DependentUpon>frmSourceCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXHtmlEditor\TXHtmlEditor.resx">
+      <DependentUpon>TXHtmlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXPager\TXPager.resx">
+      <DependentUpon>TXPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXPander\XPander\Panel.resx">
+      <DependentUpon>Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXPander\XPander\XPanderPanel.resx">
+      <DependentUpon>XPanderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXPander\XPander\XPanderPanelList.resx">
+      <DependentUpon>XPanderPanelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXTextBox\TXTextBox.resx">
+      <DependentUpon>TXTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TXToolBar\TXToolBar.resx">
+      <DependentUpon>TXToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorBox\frmErrorBox.resx">
+      <DependentUpon>frmErrorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEntity\FormInfoListEntity.resx">
+      <DependentUpon>FormInfoListEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEntity\FormListEntity.resx">
+      <DependentUpon>FormListEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm\frmSkinManager.resx">
+      <DependentUpon>frmSkinManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBox\TXMessageBox.resx">
+      <DependentUpon>TXMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitingBox\TXWaitingBox.resx">
+      <DependentUpon>TXWaitingBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controls\Docking\Resources\Thumbs.db" />
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevrondown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevronleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevronright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevronup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closepanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_h.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_h.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the_pictures_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_preview_archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1312941478_old-view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1312954756_Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Skin\bg\bg01.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Skin\bg\bg02.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Skin\bg\bg03.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Skin\bg\bg04.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Skin\bg\bg05.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Skin\bg\bg06.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\Docking\DockPanel.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+    <Content Include="Controls\Docking\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelBottom.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelBottom_Active.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelFill.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelFill_Active.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelLeft.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelLeft_Active.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelRight.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelRight_Active.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelTop.bmp" />
+    <Content Include="Controls\Docking\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <Content Include="Controls\Docking\Resources\DockPane_AutoHide.bmp" />
+    <Content Include="Controls\Docking\Resources\DockPane_Close.bmp" />
+    <Content Include="Controls\Docking\Resources\DockPane_Dock.bmp" />
+    <Content Include="Controls\Docking\Resources\DockPane_Option.bmp" />
+    <Content Include="Controls\Docking\Resources\DockPane_OptionOverflow.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
